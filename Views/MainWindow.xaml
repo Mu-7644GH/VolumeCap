@@ -1,0 +1,38 @@
+﻿<Window x:Class="VolumeCap.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VolumeCap.Views"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Closing="Window_Closing"
+        Title="VolumeCap" Height="353" Width="340">
+ 
+
+
+    <Grid>
+        <StackPanel>
+            <Slider x:Name="maxVolumeSlider" ValueChanged="maxVolumeSlider_ValueChanged"  Margin="20 20 20 10"  Maximum="100" TickPlacement="TopLeft" TickFrequency="2" Foreground="Black" IsSnapToTickEnabled="True" />
+            <Label x:Name="maxVolumeValueLabel" Margin="40 0 5 0">Max Master Volume:</Label>
+            <StackPanel Orientation="Horizontal" Margin="40 0 40 10">
+                <TextBlock x:Name="maxVolumeValueTextBlock" Width="45"  Margin="10 0 10 0" FontSize="22" Text="{Binding ElementName=maxVolumeSlider, Path=Value}"/>
+                <Border BorderBrush="Gray" Height="20" BorderThickness="0.5" Margin=" 0 0 10 0"></Border>
+                <CheckBox x:Name="isAppliedCB" Click="isAppliedCB_Click"  VerticalAlignment="Center">Applied</CheckBox>
+            </StackPanel>
+            <Button x:Name="lockUnlockButton" Click="lockUnlockButton_Click"  Width="60" Height="35" Content="Lock" HorizontalAlignment="Center"/>
+            <Label Content="Password:" Margin="30 10 30 5"  HorizontalAlignment="Center" />
+            <PasswordBox x:Name="mainLockUnlockPassBox" Width="100" Height="25" Margin="10 0"  />
+            <TextBlock x:Name="loginPassStatus" HorizontalAlignment="Center" Text="" TextWrapping="Wrap"  Width="{Binding Path=Width,ElementName=mainLockUnlockPassBox}" Height="40" />
+            <StackPanel Orientation="Horizontal"  Height="20" Margin="20 0">
+                <Button x:Name="settingsButton" Click="settingsButton_Click" Margin="0 0 10 0" Content="Settings" />
+                <!--<Button Click="resetButton_Click" x:Name="resetButton" Margin="0 0 10 0" Content="Re"/>-->
+            </StackPanel>
+            <StatusBar Margin="0 15 0 0" Height="20" VerticalAlignment="Bottom">
+                <StatusBarItem>
+                    <TextBlock x:Name="versionInfoTB"></TextBlock>
+                </StatusBarItem>
+            </StatusBar>
+        </StackPanel>
+    </Grid>
+</Window>
