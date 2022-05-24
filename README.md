@@ -1,8 +1,10 @@
 # VolumeCap
-### Set maximum volume, limit and lock computer volume. ###   
+## Set maximum volume, limit and lock computer volume. ##   
 
 Simple small app to set maximum volume on your computer and lock it to preven the volume from going above the limit.  
 inspierd by [Quiet on the Set](https://github.com/troylar/quiet-on-the-set).
+
+:heavy_exclamation_mark:***_The app probably won't be maintenied. It was created for personal use, currently not using it but others may find it usefull._***
 
 -----------------------------------------------------
 
