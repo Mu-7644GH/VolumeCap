@@ -4,7 +4,7 @@
 Simple small app to set maximum volume Limit on your Windows computer.
 inspired by [Quiet on the Set](https://github.com/troylar/quiet-on-the-set).
 
-:heavy_exclamation_mark:***_The app probably won't be maintenied. It was created for personal use, currently not using it but others may find it usefull._***  
+:heavy_exclamation_mark:***_Was created for personal use. Old code, won't be touched again. Tested and working on Win 10/11._***  
 
 -----------------------------------------------------
 Download on [Sourcefforge](https://sourceforge.net/projects/volumecap/).
